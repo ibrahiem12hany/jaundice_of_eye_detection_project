@@ -52,7 +52,7 @@ pretrained_model = models.resnet18(pretrained=True)
 pretrained_model.fc = nn.Linear(pretrained_model.fc.in_features, len(class_names))
 6. Training the Model:
 The model is trained over multiple epochs, and metrics like loss and accuracy are calculated:
-def train_model(model, criterion, optimizer, train_loader, num_epochs=5):
+def train_model(model, criterion, optimizer, train_loader, num_epochs=10):
 Loss and accuracy plots are generated for visual analysis:
 plot_training_metrics(train_losses, train_accuracies)
 7. Saving the Model:

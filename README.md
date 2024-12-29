@@ -63,10 +63,12 @@ The model is evaluated on the test set, and accuracy along with a confusion matr
 def evaluate_model(model, test_loader):
 The confusion matrix is visualized using seaborn:
 def plot_confusion_matrix(labels, preds):
+
 9.Visualization
 1.Visualizes the training loss and accuracy per epoch using line plots.
 2.Generates and visualizes a confusion matrix to evaluate the model's predictions against true labels.
 3.Displays a few test images alongside their true labels and predicted classes.
+
 10. GUI for Image Prediction:
 A GUI is created using Tkinter, which allows users to upload an image and get a prediction:
 The prediction result is displayed on the GUI after processing the image and passing it through the trained model.

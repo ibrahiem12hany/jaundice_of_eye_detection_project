@@ -52,7 +52,7 @@ pretrained_model = models.resnet18(pretrained=True)
 pretrained_model.fc = nn.Linear(pretrained_model.fc.in_features, len(class_names))
 6. Training the Model:
 The model is trained over multiple epochs, and metrics like loss and accuracy are calculated:
-def train_model(model, criterion, optimizer, train_loader, num_epochs=10):
+def train_model(model, criterion, optimizer, train_loader, num_epochs=5):
 Loss and accuracy plots are generated for visual analysis:
 plot_training_metrics(train_losses, train_accuracies)
 7. Saving the Model:
@@ -63,7 +63,11 @@ The model is evaluated on the test set, and accuracy along with a confusion matr
 def evaluate_model(model, test_loader):
 The confusion matrix is visualized using seaborn:
 def plot_confusion_matrix(labels, preds):
-9. GUI for Image Prediction:
+9.Visualization
+1.Visualizes the training loss and accuracy per epoch using line plots.
+2.Generates and visualizes a confusion matrix to evaluate the model's predictions against true labels.
+3.Displays a few test images alongside their true labels and predicted classes.
+10. GUI for Image Prediction:
 A GUI is created using Tkinter, which allows users to upload an image and get a prediction:
 The prediction result is displayed on the GUI after processing the image and passing it through the trained model.
 Functions:
@@ -84,3 +88,4 @@ GUI Features:
 •	Prediction Result: The model predicts whether the image contains "Jaundiced Eyes" or "Normal Eyes," and the result is shown in the GUI.
 Conclusion:
 This code allows for both training a deep learning model for jaundice detection and using a simple GUI to predict the condition from uploaded images.
+
